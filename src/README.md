@@ -63,9 +63,19 @@ The Muse uses a BT 4.2 [BTLE](https://www.google.com/search?client=firefox-b-1-d
 
 1. Follow the [instructions on this page](https://docs.petal.tech/connect-to-muse/connect-a-muse-device) to install petals and connect to the Muse. Also make sure to follow the OS specific instructions for connecting linked on the same page. Write steps below on how to connect with the Muse.
 
+Turn on bluetooth, power on muse, run Petal Metrics, click stream.
+
 2. The Petals Metrics software uses OSC or LSL. What are they? What is the difference between the two? What is UDP? What is the relation between UDP and OSC?
 
+OSC (open sound control) is a protocol for networking sound synthesizers, computers, and other multimedia devices. LSL (lab streaming layer) is a research-focused marker streaming system providing high resolution timestamps and high frequency EEG streaming. UDP is user datagram protocol and is the type of OSC stream.
+
 3. Read src/osc_muse_stream.py and get it to run. What is Python OSC? What is pythonosc.osc_server.ThreadingOSCUDPServer? What is pythonosc.dispatcher.Dispatcher()? 
+
+Python OSC refers to a library for Open Sound Control (OSC) communication in Python. OSC is a protocol for communication among computers, sound synthesizers, and other multimedia devices that is designed for low-latency, high-speed communication. It is often used in music, multimedia, and interactive installations.
+
+ThreadingOSCUDPServer is a class provided by the python-osc library for creating an OSC server that can handle incoming messages in a multithreaded manner. This means that the server can process multiple incoming messages simultaneously using separate threads, which can be useful for improving performance and responsiveness.
+
+Dispatcher is another class from the python-osc library. It is used to define the mapping between OSC addresses (or patterns) and the functions or methods that should be executed when a message with a matching address is received. The dispatcher essentially routes incoming OSC messages to the appropriate functions for processing.
 
 
 
